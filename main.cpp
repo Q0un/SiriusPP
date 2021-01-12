@@ -2,6 +2,7 @@
 #include "rule.h"
 #include <vector>
 #include <string>
+#include "algo.h"
 
 std::vector<Rule> scheme;
 int n_rules;
