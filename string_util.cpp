@@ -2,7 +2,7 @@
 // Created by qqun on 12.01.2021.
 //
 
-#include "algo.h"
+#include "string_util.h"
 #include <vector>
 
 int findFirstOccurence(const std::string &s, const std::string &sub) {

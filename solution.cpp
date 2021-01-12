@@ -4,7 +4,7 @@
 
 #include "solution.h"
 #include "rule.h"
-#include "algo.h"
+#include "string_util.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -45,5 +45,6 @@ void solve() {
             ended = true;
         }
     }
+    std::cout << "Result:" << std::endl;
     std::cout << cur_str << std::endl;
 }
