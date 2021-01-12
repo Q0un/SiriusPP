@@ -16,6 +16,7 @@ public:
     Rule(const std::string &first, const std::string &second);
 
     void setEnd(bool val);
+    bool isEnd() const;
 
     friend std::istream& operator>> (std::istream &in, Rule &rule);
 };

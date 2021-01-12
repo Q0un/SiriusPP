@@ -16,6 +16,10 @@ void Rule::setEnd(bool val) {
     end = val;
 }
 
+bool Rule::isEnd() const {
+    return end;
+}
+
 std::istream& operator>> (std::istream &in, Rule &rule) {
     std::string arrow;
     in >> rule.first >> arrow >> rule.second;

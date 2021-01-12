@@ -20,6 +20,28 @@ void read() {
     std::cin >> start_str;
 }
 
+void solve() {
+    std::string cur_str = start_str;
+    bool ended = false;
+    while (!ended) {
+        bool was_updated = false;
+        for (int i = 0; i < n_rules; i++) {
+            int place = findFirstOccurence(cur_str, scheme[i].first);
+            if (place != -1) {
+                was_updated = true;
+                cur_str.replace(place, scheme[i].first.size(), scheme[i].second);
+                if (scheme[i].isEnd()) {
+                    ended = true;
+                }
+                break;
+            }
+        }
+        if (was_updated) {
+            ended = true;
+        }
+    }
+}
+
 int main() {
     read();
 }
