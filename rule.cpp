@@ -4,9 +4,23 @@
 
 #include "rule.h"
 
-Rule::Rule(const std::string &first, const std::string &second) : std::pair<std::string, std::string>(first, second) {}
+Rule::Rule() : std::pair<std::string, std::string>() {
+    end = false;
+}
+
+Rule::Rule(const std::string &first, const std::string &second) : std::pair<std::string, std::string>(first, second) {
+    end = false;
+}
+
+void Rule::setEnd(bool val) {
+    end = val;
+}
 
 std::istream& operator>> (std::istream &in, Rule &rule) {
-    in >> rule.first >> rule.second;
+    std::string arrow;
+    in >> rule.first >> arrow >> rule.second;
+    if (arrow.back() == '.') {
+        rule.setEnd(true);
+    }
     return in;
 }

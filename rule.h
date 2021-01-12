@@ -9,10 +9,13 @@
 #include <iostream>
 
 class Rule : public std::pair<std::string, std::string> {
+    bool end;
 
 public:
-    Rule() = default;
+    Rule();
     Rule(const std::string &first, const std::string &second);
+
+    void setEnd(bool val);
 
     friend std::istream& operator>> (std::istream &in, Rule &rule);
 };
