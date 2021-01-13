@@ -13,7 +13,7 @@ class Rule : public std::pair<std::string, std::string> {
 
 public:
     Rule();
-    Rule(const std::string &first, const std::string &second);
+    Rule(const std::string &first, const std::string &second, bool end = false);
 
     void setEnd(bool val);
     bool isEnd() const;
