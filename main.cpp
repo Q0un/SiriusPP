@@ -1,6 +1,4 @@
 #include <iostream>
-#include "rule.h"
-#include <vector>
 #include <string>
 #include "natural_algorithm.h"
 
