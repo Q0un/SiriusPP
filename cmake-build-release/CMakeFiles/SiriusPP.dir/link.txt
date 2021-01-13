@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/SiriusPP.dir/main.cpp.o CMakeFiles/SiriusPP.dir/rule.cpp.o CMakeFiles/SiriusPP.dir/string_util.cpp.o CMakeFiles/SiriusPP.dir/natural_algorithm.cpp.o  -o SiriusPP 

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qqun/SiriusPP/main.cpp
+fstream
+-
+string
+-
+natural_algorithm.h
+/home/qqun/SiriusPP/natural_algorithm.h
+
+/home/qqun/SiriusPP/natural_algorithm.h
+vector
+-
+string
+-
+iostream
+-
+rule.h
+/home/qqun/SiriusPP/rule.h
+
+/home/qqun/SiriusPP/rule.h
+string
+-
+iostream
+-
+

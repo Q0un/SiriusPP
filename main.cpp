@@ -1,23 +1,25 @@
-#include <iostream>
+#include <fstream>
 #include <string>
 #include "natural_algorithm.h"
 
 Algorithm algo;
 std::string start_str;
 
-void read() {
-    std::cin >> algo;
-    std::cin >> start_str;
+void read(std::ifstream &in) {
+    in >> algo;
+    in >> start_str;
 }
 
 int main() {
-    read();
+    std::ifstream in("./interface/input.txt");
+    std::ofstream out("./interface/output.txt");
+    read(in);
     std::string res = algo.applyAlgo(start_str);
     if (res == "\\inf") {
-        std::cout << "Infinite or too many iterations." << std::endl;
+        out << "Infinite or too many iterations." << std::endl;
     } else if (res.empty()) {
-        std::cout << "\\eps" << std::endl;
+        out << "\\eps" << std::endl;
     } else {
-        std::cout << res << std::endl;
+        out << res << std::endl;
     }
 }
