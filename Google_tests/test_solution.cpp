@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "../solution.h"
+#include "../natural_algorithm.h"
 
 TEST(SolutionTestSuite, 1) {
     // TODO
