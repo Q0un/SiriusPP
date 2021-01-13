@@ -1,4 +1,5 @@
 # Natural Algorithms
+### Sergey Akimov
 
 ## Running
 Run cmake-build-release/SiriusPP with input and output files in arguments.
