@@ -10,9 +10,9 @@ void read(std::ifstream &in) {
     in >> start_str;
 }
 
-int main() {
-    std::ifstream in("./interface/input.txt");
-    std::ofstream out("./interface/output.txt");
+int main(int argc, char* argv[]) {
+    std::ifstream in(argv[1]);
+    std::ofstream out(argv[2]);
     read(in);
     std::string res = algo.applyAlgo(start_str);
     if (res == "\\inf") {
@@ -22,4 +22,5 @@ int main() {
     } else {
         out << res << std::endl;
     }
+    return 0;
 }
