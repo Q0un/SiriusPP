@@ -19,22 +19,37 @@ void Algorithm::setScheme(const std::vector<Rule> &val) {
 
 std::string Algorithm::applyAlgo(std::string str) const {
     bool ended = false;
+    int iterations = 0;
     while (!ended) {
+        if (iterations == MAX_ITERATIONS) {
+            return "\\inf";
+        }
+
         bool was_updated = false;
         for (int i = 0; i < n_rules; i++) {
-            int place = findFirstOccurence(str, scheme[i].first);
-            if (place != -1) {
+            if (scheme[i].first.empty()) {
+                str = scheme[i].second + str;
                 was_updated = true;
-                str.replace(place, scheme[i].first.size(), scheme[i].second);
                 if (scheme[i].isEnd()) {
                     ended = true;
                 }
                 break;
+            } else {
+                int place = findFirstOccurence(str, scheme[i].first);
+                if (place != -1) {
+                    str.replace(place, scheme[i].first.size(), scheme[i].second);
+                    was_updated = true;
+                    if (scheme[i].isEnd()) {
+                        ended = true;
+                    }
+                    break;
+                }
             }
         }
         if (!was_updated) {
             ended = true;
         }
+        iterations++;
     }
     return str;
 }

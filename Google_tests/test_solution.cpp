@@ -33,3 +33,25 @@ TEST(SolutionTestSuite, 4) {
     std::string str = "aa";
     EXPECT_EQ(algo.applyAlgo(str), "bb");
 }
+
+TEST(SolutionTestSuite, 5) {
+    Algorithm algo(2, {Rule("a", "b", false),
+                       Rule("", "xx", true)});
+    std::string str = "aa";
+    EXPECT_EQ(algo.applyAlgo(str), "xxbb");
+}
+
+TEST(SolutionTestSuite, 6) {
+    Algorithm algo(3, {Rule("a", "b", false),
+                       Rule("b", "c", false),
+                       Rule("", "d", false)});
+    std::string str = "abacab";
+    EXPECT_EQ(algo.applyAlgo(str), "\\inf");
+}
+
+TEST(SolutionTestSuite, 7) {
+    Algorithm algo(2, {Rule("a", "", false),
+                       Rule("b", "a", false)});
+    std::string str = "abbbaba";
+    EXPECT_EQ(algo.applyAlgo(str), "");
+}

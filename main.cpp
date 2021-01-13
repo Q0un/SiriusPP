@@ -12,5 +12,12 @@ void read() {
 
 int main() {
     read();
-    std::cout << algo.applyAlgo(start_str) << std::endl;
+    std::string res = algo.applyAlgo(start_str);
+    if (res == "\\inf") {
+        std::cout << "Infinite or too many iterations." << std::endl;
+    } else if (res.empty()) {
+        std::cout << "\\eps" << std::endl;
+    } else {
+        std::cout << res << std::endl;
+    }
 }

@@ -13,6 +13,7 @@
 class Algorithm {
     std::vector<Rule> scheme;
     int n_rules;
+    const int MAX_ITERATIONS = 10000;
 
 public:
     Algorithm() = default;

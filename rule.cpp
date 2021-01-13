@@ -22,6 +22,12 @@ bool Rule::isEnd() const {
 std::istream& operator>> (std::istream &in, Rule &rule) {
     std::string arrow;
     in >> rule.first >> arrow >> rule.second;
+    if (rule.first == "\\eps") {
+        rule.first.clear();
+    }
+    if (rule.second == "\\eps") {
+        rule.second.clear();
+    }
     if (arrow.back() == '.') {
         rule.setEnd(true);
     }
