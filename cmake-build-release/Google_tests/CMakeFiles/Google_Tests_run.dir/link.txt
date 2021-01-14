@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/Google_Tests_run.dir/test_find.cpp.o CMakeFiles/Google_Tests_run.dir/test_solution.cpp.o CMakeFiles/Google_Tests_run.dir/__/rule.cpp.o CMakeFiles/Google_Tests_run.dir/__/string_util.cpp.o CMakeFiles/Google_Tests_run.dir/__/natural_algorithm.cpp.o  -o Google_Tests_run  ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 
